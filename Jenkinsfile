@@ -5,7 +5,7 @@ pipeline {
     stages {
         stage ('build') {
             steps {
-                sh 'docker run -it --name=app ubuntu:20.04'
+                sh 'ubuntu --version'
                 sh 'pwd'
             }
             
