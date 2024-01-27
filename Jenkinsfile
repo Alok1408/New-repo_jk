@@ -5,7 +5,8 @@ pipeline {
     stages {
         stage ('build') {
             steps {
-                sh 'lsb_release -d'
+                sh 'docker run -it --name=app ubuntu'
+                sh 'pwd && ls'
                 
             }
             
