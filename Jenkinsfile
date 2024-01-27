@@ -5,9 +5,9 @@ pipeline {
   stages {
     stage('Test') {
       steps {
-        sh '''cd /usr/share/nginx/html
-        echo "Hello nginx" > index.html
-        '''
+        sh 'cd /usr/share/nginx/html'
+        sh 'echo "Hello nginx" > index.html'
+        
       }
     }
   }
