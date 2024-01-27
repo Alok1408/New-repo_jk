@@ -5,7 +5,7 @@ pipeline {
     stages {
         stage ('build') {
             steps {
-                sh 'docker container run -it --image=app nginx:20.04'
+                sh 'docker run -it --name=app nginx:20.04'
                 sh 'pwd'
             }
             
