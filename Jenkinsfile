@@ -5,7 +5,7 @@ pipeline {
     stages {
         stage ('build') {
             steps {
-                sh 'ubuntu --version'
+                sh 'lsb_release -d'
                 
             }
             
