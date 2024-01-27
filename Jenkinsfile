@@ -1,15 +1,14 @@
 pipeline {
-    agent {
-        docker { image 'ubuntu' }
+  agent {
+    docker { image 'nginx:5.7' }
+  }
+  stages {
+    stage('Test') {
+      steps {
+        sh '''cd /usr/share/nginx/html
+        echo "Hello nginx" > index.html
+        '''
+      }
     }
-    stages {
-        stage ('build') {
-            steps {
-                sh 'docker run -it --name=app ubuntu'
-                sh 'pwd && ls'
-                
-            }
-            
-        }
-    }
+  }
 }
