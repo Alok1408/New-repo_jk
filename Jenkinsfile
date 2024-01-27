@@ -1,12 +1,12 @@
 pipeline {
   agent {
-    docker { image 'nginx:5.7' }
+    docker { image 'ubuntu:16.04' }
   }
   stages {
     stage('Test') {
       steps {
-        sh 'cd /usr/share/nginx/html'
-        sh 'echo "Hello nginx" > index.html'
+        sh '''cd /usr/share/nginx/html
+            echo "hello-nginx" > index.html'''
         
       }
     }
