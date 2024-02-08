@@ -1,0 +1,19 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('scm checkout') {
+            steps {
+                git branch: 'main', url: 'https://github.com/Alok1408/New-repo_jk.git'
+            }
+        }
+        stage('docker image build') {
+            steps {
+                script {
+                    sh 'docker build -t alok1408/nginx:latest'
+                }
+            }
+        }
+    }
+}
+
