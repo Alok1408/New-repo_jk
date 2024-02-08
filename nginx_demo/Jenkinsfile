@@ -9,7 +9,7 @@ pipeline {
         }
         stage('docker image build') {
             steps {
-              sh'docker build -t alok1408/nginx .'
+              sh'docker build -t alok1408/my-app-1.0 .'
             }
         }
     }
