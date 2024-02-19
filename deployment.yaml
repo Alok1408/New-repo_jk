@@ -18,7 +18,7 @@ spec:
         app: nginx
     spec:
       containers:
-      - image: nginx
+      - image: alok1408/my-javaapp-1.0
         name: nginx
         resources: {}
 status: {}
